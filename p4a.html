@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demonstrating JavaScript functions</title>
+</head>
+<body>
+<section>
+<h1>Finding the Leftmost Vowel</h1>
+<p>Enter a string: <input type="text" id="t1"></p>
+<input type="button" value="Find" onclick="alert(leftv(document.getElementById('t1').value))">
+
+<script>
+function leftv(str) {
+  for (i = 0; i < str.length; i++) {
+    if (isVowel(str.charAt(i))) {
+      return "Leftmost vowel of '" + str + "' is at location " + (i + 1);
+    }
+  }
+  return "No vowels found in the string '" + str + "'";
+}
+
+function isVowel(char) {
+  char = char.toLowerCase();
+  return char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u';
+}
+</script>
+</section>
+</body>
+</html>

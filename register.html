@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  input[type="submit"] {
+    margin-left: 100px;
+  }>
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" type="text/css" >
+  
+  
+</head>
+<body>
+    
+  <h1>Student Registration Form</h1>
+  <form id="registrationForm">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" required>
+    </div>
+    <div>
+      <label for="course">Course:</label>
+      <select id="course" required>
+        <option value="">Select a course</option>
+        <option value="BE">BE</option>
+        <option value="BCA">BCA</option>
+        <option value="M.Tech">M.Tech</option>
+      </select>
+    </div>
+    <div>
+      <input type="submit" value="Register" onclick="('sucessfully Registered')">
+     
+    </div>
+  </form>
+  
+  <script >
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // prevent form submission
+  
+  // Get form values
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var course = document.getElementById("course").value;
+  
+  // Do something with the form data (e.g., send it to a server)
+  console.log("Name: " + name);
+  console.log("Email: " + email);
+  console.log("Phone: " + phone);
+  console.log("Course: " + course);
+  
+  // Clear form fields
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("course").selectedIndex = 0;
+});
+
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demonstrating JavaScript functions</title>
+</head>
+<body>
+<section>
+<h1>Reverse a Number</h1>
+<p>Enter a number: <input type="text" id="t2"></p>
+<input type="button" value="Reverse" onclick="alert(rev(document.getElementById('t2').value))">
+
+<script>
+function rev(num) {
+  if (isNaN(num)) {
+    return "Invalid number";
+  }
+  
+  var rnum = 0;
+  var temp = num;
+  while (num != 0) {
+    rnum *= 10;
+    rnum += num % 10;
+    num -= num % 10;
+    num = Math.floor(num / 10);
+  }
+  
+  return "Reverse of " + temp + " is " + rnum;
+}
+</script>
+</section>
+</body>
+</html>
